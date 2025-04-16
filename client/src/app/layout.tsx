@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = Open_Sans({
    subsets: ["latin"],
@@ -18,7 +19,11 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="pt-BR">
-         <body className={`${geistSans.className} antialiased`}>{children}</body>
+         <body className={`${geistSans.className} antialiased`}>
+            <Header />
+            {children}
+            
+         </body>
       </html>
    );
 }
