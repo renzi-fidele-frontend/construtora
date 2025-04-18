@@ -3,15 +3,18 @@
 :root {
    --background: #ffffff;
    --foreground: #171717;
+   --primary: #14b8a6;
 }
 
-* {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+@theme {
+   --color-primary: var(--primary);
 }
 
 body {
    background: var(--background);
    color: var(--foreground);
+}
+
+#banner {
+   background: radial-gradient(50% 50% at 50% 50%, rgba(134, 121, 121, 0.6336) 0%, rgba(0, 0, 0, 0.64) 100%);
 }
