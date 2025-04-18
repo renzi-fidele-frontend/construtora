@@ -22,7 +22,6 @@ export default function RootLayout({
          <body className={`${open.className} antialiased`}>
             <Header />
             {children}
-            
          </body>
       </html>
    );

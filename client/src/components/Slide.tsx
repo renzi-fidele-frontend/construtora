@@ -18,7 +18,7 @@ const Slide = ({ empreendimento }: ISlide) => {
    return (
       <div className="relative">
          <Image src={Foto} alt="" />
-         <div id="banner" className="absolute inset-0"></div>
+         <div id="banner" className="absolute inset-0 opacity-50"></div>
          <Container>
             <div className="relative w-1/2">
                <div className="flex flex-col gap-[45px] text-white bottom-[6rem] absolute z-3">
@@ -29,7 +29,7 @@ const Slide = ({ empreendimento }: ISlide) => {
                      <h1 className="font-bold text-7xl">{empreendimento.titulo}</h1>
                      <p className="font-medium text-xl">{empreendimento.descricao}</p>
                   </div>
-                  <button className="bg-primary px-[30px] py-[9px] text-[18px] font-semibold rounded-lg w-fit">Conheça o empreendimento</button>
+                  <button className="bg-primary px-[30px] py-[9px] text-[18px] font-semibold rounded-lg w-fit shadow-2xl shadow-emerald-800">Conheça o empreendimento</button>
                   <ul className="flex gap-[27px] *:flex *:items-center *:gap-2 text-lg ">
                      <li>
                         <MapPin className="text-primary" />
