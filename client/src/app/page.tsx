@@ -4,6 +4,8 @@ import Container from "@/components/Container";
 import Tabs from "@/components/Tabs";
 import { IEmpreendimento } from "./global";
 import CardEmpreendimento from "@/components/CardEmpreendimento";
+import Image from "next/image";
+import fotoSobre from "@/../public/img/home-sobre.jpg";
 
 const empreendimentos: IEmpreendimento[] = [
    {
@@ -14,7 +16,7 @@ const empreendimentos: IEmpreendimento[] = [
       destaques: "2 e 3 quartos",
       endereco_completo: "Bairro Areias, Tijucas",
       titulo: "Villa di Napoli",
-      estado: "Santa Catarina"
+      estado: "Santa Catarina",
    },
    {
       foto: fundo,
@@ -24,7 +26,7 @@ const empreendimentos: IEmpreendimento[] = [
       destaques: "2 e 3 quartos",
       endereco_completo: "Bairro Areias, Tijucas",
       titulo: "Villa di Napoli",
-      estado: "Santa Catarina"
+      estado: "Santa Catarina",
    },
    {
       foto: fundo,
@@ -34,7 +36,7 @@ const empreendimentos: IEmpreendimento[] = [
       destaques: "2 e 3 quartos",
       endereco_completo: "Bairro Areias, Tijucas",
       titulo: "Villa di Napoli",
-      estado: "Santa Catarina"
+      estado: "Santa Catarina",
    },
 ];
 
@@ -69,8 +71,28 @@ export default function Home() {
                      <CardEmpreendimento empreendimento={v} key={k} />
                   ))}
                </div>
+               <button></button>
             </Container>
          </div>
+
+         {/* Cta Sobre */}
+         <Container>
+            <div className="pt-[75px] pb-[85px] flex flex-nowrap ">
+               <div className="basis-[40%] ">
+                  <div id="prettyBox" className="flex flex-col gap-[26px] px-[50px] py-[70px] rounded-lg">
+                     <h2 className="text-[35px] font-bold">Imóveis com a qualidade Construtora</h2>
+                     <p className="text-[19px] font-medium">
+                        Somos uma empresa de construção civil pesada. Especializados em saneamento, pavimentação, redes enterradas, obras de arte
+                        especial, estruturas de concreto armado, urbanização, estruturas metálicas e tubulações.
+                     </p>
+                     <button className="px-[23px] py-[10px] w-fit bg-black text-white rounded-[5px]">Saiba mais</button>
+                  </div>
+               </div>
+               <div className="basis-[60%] pt-[56px]">
+                  <Image className="relative start-[-20px] end-0 w-full" src={fotoSobre} alt="" />
+               </div>
+            </div>
+         </Container>
       </div>
    );
 }

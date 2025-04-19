@@ -20,3 +20,7 @@ body {
 #banner {
    background: radial-gradient(50% 50% at 50% 50%, rgba(134, 121, 121, 0.6336) 0%, rgba(0, 0, 0, 0.64) 100%);
 }
+
+#prettyBox {
+   background: linear-gradient(180deg, #F6F6F6 0%, #D2DBDA 100%);
+}

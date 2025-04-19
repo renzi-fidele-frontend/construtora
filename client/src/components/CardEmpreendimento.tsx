@@ -6,7 +6,7 @@ import Link from "next/link";
 const CardEmpreendimento = ({ empreendimento }: { empreendimento: IEmpreendimento }) => {
    return (
       <Link href="">
-         <div className="relative border rounded-[9px] border-[#E4E4E7] transition hover:scale-101">
+         <div className="relative border rounded-[9px] border-[#E4E4E7] transition hover:scale-101 bg-white">
             <Image className="w-full bg-gray-300 h-[250px]" src={""} alt="" />
             <div className="flex p-[23px] gap-[10px]">
                <div className="">
