@@ -6,6 +6,8 @@ import { IEmpreendimento } from "./global";
 import CardEmpreendimento from "@/components/CardEmpreendimento";
 import Image from "next/image";
 import fotoSobre from "@/../public/img/home-sobre.jpg";
+import { ArrowRight } from "lucide-react";
+import Button from "@/components/Button";
 
 const empreendimentos: IEmpreendimento[] = [
    {
@@ -71,14 +73,18 @@ export default function Home() {
                      <CardEmpreendimento empreendimento={v} key={k} />
                   ))}
                </div>
-               <button></button>
+               <div className="flex justify-center mt-7">
+                  <Button>
+                     Ver mais empreendimentos <ArrowRight />
+                  </Button>
+               </div>
             </Container>
          </div>
 
          {/* Cta Sobre */}
          <Container>
             <div className="pt-[75px] pb-[85px] flex flex-nowrap ">
-               <div className="basis-[40%] ">
+               <div className="basis-[45%] ">
                   <div id="prettyBox" className="flex flex-col gap-[26px] px-[50px] py-[70px] rounded-lg">
                      <h2 className="text-[35px] font-bold">Imóveis com a qualidade Construtora</h2>
                      <p className="text-[19px] font-medium">
@@ -88,7 +94,7 @@ export default function Home() {
                      <button className="px-[23px] py-[10px] w-fit bg-black text-white rounded-[5px]">Saiba mais</button>
                   </div>
                </div>
-               <div className="basis-[60%] pt-[56px]">
+               <div className="basis-[58%] pt-[56px]">
                   <Image className="relative start-[-20px] end-0 w-full" src={fotoSobre} alt="" />
                </div>
             </div>
