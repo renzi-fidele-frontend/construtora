@@ -1,24 +1,14 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Container from "./Container";
 import { Building, Calendar, MapPin } from "lucide-react";
 import Foto from "../../public/img/Fundo.jpg";
+import { IEmpreendimento } from "@/app/global";
 
-interface ISlide {
-   empreendimento: {
-      titulo: string;
-      categoria: string;
-      descricao: string;
-      endereco: string;
-      destaques: string;
-      data_entrega: string;
-      foto: StaticImageData;
-   };
-}
-const Slide = ({ empreendimento }: ISlide) => {
+const Slide = ({ empreendimento }: { empreendimento: IEmpreendimento }) => {
    return (
       <div className="relative">
          <Image src={Foto} alt="" />
-         <div id="banner" className="absolute inset-0 opacity-50"></div>
+         <div id="banner" className="absolute inset-0 opacity-95"></div>
          <Container>
             <div className="relative w-1/2">
                <div className="flex flex-col gap-[45px] text-white bottom-[6rem] absolute z-3">
@@ -29,7 +19,9 @@ const Slide = ({ empreendimento }: ISlide) => {
                      <h1 className="font-bold text-7xl">{empreendimento.titulo}</h1>
                      <p className="font-medium text-xl">{empreendimento.descricao}</p>
                   </div>
-                  <button className="bg-primary px-[30px] py-[9px] text-[18px] font-semibold rounded-lg w-fit shadow-2xl shadow-emerald-800">Conheça o empreendimento</button>
+                  <button className="bg-primary px-[30px] py-[9px] text-[18px] font-semibold rounded-lg w-fit shadow-2xl shadow-emerald-900">
+                     Conheça o empreendimento
+                  </button>
                   <ul className="flex gap-[27px] *:flex *:items-center *:gap-2 text-lg ">
                      <li>
                         <MapPin className="text-primary" />
