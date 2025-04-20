@@ -4,6 +4,8 @@
    --background: #ffffff;
    --foreground: #f5f6f8;
    --primary: #14b8a6;
+   /* SwiperJs */
+   --swiper-navigation-sides-offset: 20px !important;
 }
 
 @theme {
@@ -27,4 +29,8 @@ body {
 
 #cardDepoimento {
    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #ecf6f5 100%);
+}
+
+.swiper-button-prev, .swiper-button-next {
+   color: white !important;
 }

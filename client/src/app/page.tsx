@@ -1,3 +1,4 @@
+"use client";
 import Slide from "@/components/Slide";
 import fundo from "../../public/img/Fundo.jpg";
 import Container from "@/components/Container";
@@ -13,6 +14,11 @@ import foto from "@/../public/img/home-sobre.jpg";
 import fotoDepoimento from "@/../public/img/depoimento.jpg";
 import CardArtigo from "@/components/CardArtigo";
 import CardDepoimento from "@/components/CardDepoimento";
+// SwiperJs
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const empreendimentos: IEmpreendimento[] = [
    {
@@ -67,6 +73,27 @@ const artigos: ICardArtigo[] = [
    },
 ];
 const depoimentos: IDepoimento[] = [
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
+   },
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
+   },
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
+   },
    {
       cliente: "Antonia e Maria",
       declaracao:
@@ -171,10 +198,14 @@ export default function Home() {
             <div className="py-[75px] text-center">
                <Heading>Depoimentos</Heading>
                <SubHeading customClass="mt-2 mb-5">Leia os depoimentos de quem realizou seus sonhos com a Construtora</SubHeading>
-               <div className="mt-40">
-                  {depoimentos.map((v, k) => (
-                     <CardDepoimento depoimento={v} key={k} />
-                  ))}
+               <div className="mt-10">
+                  <Swiper navigation={true} modules={[Pagination, Navigation]} spaceBetween={30} slidesPerView={3}>
+                     {depoimentos.map((v, k) => (
+                        <SwiperSlide key={k}>
+                           <CardDepoimento depoimento={v} />
+                        </SwiperSlide>
+                     ))}
+                  </Swiper>
                </div>
             </div>
          </Container>
