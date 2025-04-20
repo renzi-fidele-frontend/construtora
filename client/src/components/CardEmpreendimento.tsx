@@ -6,7 +6,7 @@ import Link from "next/link";
 const CardEmpreendimento = ({ empreendimento }: { empreendimento: IEmpreendimento }) => {
    return (
       <Link href="">
-         <div className="relative border rounded-[9px] border-[#E4E4E7] transition hover:scale-101 bg-white">
+         <div className="relative border rounded-[9px] border-[#E4E4E7] transition hover:scale-101 bg-white overflow-hidden">
             <Image className="w-full bg-gray-300 h-[250px]" src={""} alt="" />
             <div className="flex p-[23px] gap-[10px]">
                <div className="">
@@ -21,7 +21,7 @@ const CardEmpreendimento = ({ empreendimento }: { empreendimento: IEmpreendiment
                      </p>
                   </div>
                </div>
-               <p className="px-[9px] py-1 bg-red-600 rounded-xl absolute top-2 start-2 text-white text-[12px] uppercase font-bold">
+               <p className="px-[9px] py-1 bg-red-600 rounded-xl absolute top-2 start-2 text-white text-[12px] uppercase font-semibold">
                   {empreendimento.categoria}
                </p>
             </div>

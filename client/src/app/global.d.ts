@@ -11,3 +11,14 @@ interface IEmpreendimento {
    foto?: StaticImageData;
    thumbnail?: StaticImageData;
 }
+
+interface ICardArtigo {
+   foto: StaticImageData;
+   data_de_publicacao: string;
+   titulo: string;
+   descricao: string;
+}
+
+interface IArtigo extends ICardArtigo {
+   sabao: number;
+}

@@ -2,12 +2,15 @@ import Slide from "@/components/Slide";
 import fundo from "../../public/img/Fundo.jpg";
 import Container from "@/components/Container";
 import Tabs from "@/components/Tabs";
-import { IEmpreendimento } from "./global";
+import { ICardArtigo, IEmpreendimento } from "./global";
 import CardEmpreendimento from "@/components/CardEmpreendimento";
 import Image from "next/image";
 import fotoSobre from "@/../public/img/home-sobre.jpg";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/Button";
+import Heading from "@/components/Heading";
+import foto from "@/../public/img/home-sobre.jpg";
+import CardArtigo from "@/components/CardArtigo";
 
 const empreendimentos: IEmpreendimento[] = [
    {
@@ -41,6 +44,26 @@ const empreendimentos: IEmpreendimento[] = [
       estado: "Santa Catarina",
    },
 ];
+const artigos: ICardArtigo[] = [
+   {
+      data_de_publicacao: "13/Fex/2023",
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      foto,
+      titulo: "Crescimento exponencial: movimentação de carga aérea no Brasil",
+   },
+   {
+      data_de_publicacao: "13/Fex/2023",
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      foto,
+      titulo: "Crescimento exponencial: movimentação de carga aérea no Brasil",
+   },
+   {
+      data_de_publicacao: "13/Fex/2023",
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      foto,
+      titulo: "Crescimento exponencial: movimentação de carga aérea no Brasil",
+   },
+];
 
 export default function Home() {
    return (
@@ -63,7 +86,7 @@ export default function Home() {
             <Container>
                <div className="flex justify-between">
                   <div>
-                     <h2 className="text-[35px] font-bold">Empreendimentos</h2>
+                     <Heading>Empreendimentos</Heading>
                      <p className="text-[18px]">Conheça os nossos imóveis e encontre seu novo lar</p>
                   </div>
                   <Tabs />
@@ -73,7 +96,7 @@ export default function Home() {
                      <CardEmpreendimento empreendimento={v} key={k} />
                   ))}
                </div>
-               <div className="flex justify-center mt-7">
+               <div className="flex justify-center mt-8">
                   <Button>
                      Ver mais empreendimentos <ArrowRight />
                   </Button>
@@ -86,7 +109,7 @@ export default function Home() {
             <div className="pt-[75px] pb-[85px] flex flex-nowrap ">
                <div className="basis-[45%] ">
                   <div id="prettyBox" className="flex flex-col gap-[26px] px-[50px] py-[70px] rounded-lg">
-                     <h2 className="text-[35px] font-bold">Imóveis com a qualidade Construtora</h2>
+                     <Heading customClass="font-semibold">Imóveis com a qualidade Construtora</Heading>
                      <p className="text-[19px] font-medium">
                         Somos uma empresa de construção civil pesada. Especializados em saneamento, pavimentação, redes enterradas, obras de arte
                         especial, estruturas de concreto armado, urbanização, estruturas metálicas e tubulações.
@@ -99,6 +122,24 @@ export default function Home() {
                </div>
             </div>
          </Container>
+
+         {/* Blog */}
+         <div className="bg-foreground py-[75px] text-center">
+            <Container>
+               <Heading>Blog</Heading>
+               <p className="text-[19px] font-medium mt-2 mb-10">Fique por dentro dos últimos artigos do blog da Construtora</p>
+               <div className="columns-3 gap-[27px]">
+                  {artigos.map((v, k) => (
+                     <CardArtigo artigo={v} key={k} />
+                  ))}
+               </div>
+               <div className="flex justify-center mt-12">
+                  <Button>
+                     Ver mais artigos <ArrowRight />
+                  </Button>
+               </div>
+            </Container>
+         </div>
       </div>
    );
 }
