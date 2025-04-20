@@ -22,3 +22,10 @@ interface ICardArtigo {
 interface IArtigo extends ICardArtigo {
    sabao: number;
 }
+
+interface IDepoimento {
+   declaracao: string;
+   cliente: string;
+   empreendimento: string;
+   foto: StaticImageData;
+}

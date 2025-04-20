@@ -2,7 +2,7 @@ import Slide from "@/components/Slide";
 import fundo from "../../public/img/Fundo.jpg";
 import Container from "@/components/Container";
 import Tabs from "@/components/Tabs";
-import { ICardArtigo, IEmpreendimento } from "./global";
+import { ICardArtigo, IDepoimento, IEmpreendimento } from "./global";
 import CardEmpreendimento from "@/components/CardEmpreendimento";
 import Image from "next/image";
 import fotoSobre from "@/../public/img/home-sobre.jpg";
@@ -10,7 +10,9 @@ import { ArrowRight } from "lucide-react";
 import Button from "@/components/Button";
 import { Heading, SubHeading } from "@/components/Typography";
 import foto from "@/../public/img/home-sobre.jpg";
+import fotoDepoimento from "@/../public/img/depoimento.jpg";
 import CardArtigo from "@/components/CardArtigo";
+import CardDepoimento from "@/components/CardDepoimento";
 
 const empreendimentos: IEmpreendimento[] = [
    {
@@ -62,6 +64,29 @@ const artigos: ICardArtigo[] = [
       descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       foto,
       titulo: "Crescimento exponencial: movimentação de carga aérea no Brasil",
+   },
+];
+const depoimentos: IDepoimento[] = [
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
+   },
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
+   },
+   {
+      cliente: "Antonia e Maria",
+      declaracao:
+         "Tenho muita satisfação de ter adquirido este imóvel no Residencial Solar de Hamburgo. Me encantei com a geografia do local e o conceito da",
+      empreendimento: "Ilha de Capri",
+      foto: fotoDepoimento,
    },
 ];
 
@@ -145,7 +170,12 @@ export default function Home() {
          <Container>
             <div className="py-[75px] text-center">
                <Heading>Depoimentos</Heading>
-               <SubHeading customClass="mt-2">Leia os depoimentos de quem realizou seus sonhos com a Construtora</SubHeading>
+               <SubHeading customClass="mt-2 mb-5">Leia os depoimentos de quem realizou seus sonhos com a Construtora</SubHeading>
+               <div className="mt-40">
+                  {depoimentos.map((v, k) => (
+                     <CardDepoimento depoimento={v} key={k} />
+                  ))}
+               </div>
             </div>
          </Container>
       </div>

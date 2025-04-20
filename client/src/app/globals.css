@@ -13,7 +13,7 @@
 }
 
 body {
-   background: var(--background);  
+   background: var(--background);
    overflow-x: hidden;
 }
 
@@ -22,5 +22,9 @@ body {
 }
 
 #prettyBox {
-   background: linear-gradient(180deg, #F6F6F6 0%, #D2DBDA 100%);
+   background: linear-gradient(180deg, #f6f6f6 0%, #d2dbda 100%);
+}
+
+#cardDepoimento {
+   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #ecf6f5 100%);
 }
