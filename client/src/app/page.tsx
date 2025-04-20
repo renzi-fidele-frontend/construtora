@@ -8,7 +8,7 @@ import Image from "next/image";
 import fotoSobre from "@/../public/img/home-sobre.jpg";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/Button";
-import Heading from "@/components/Heading";
+import { Heading, SubHeading } from "@/components/Typography";
 import foto from "@/../public/img/home-sobre.jpg";
 import CardArtigo from "@/components/CardArtigo";
 
@@ -87,7 +87,7 @@ export default function Home() {
                <div className="flex justify-between">
                   <div>
                      <Heading>Empreendimentos</Heading>
-                     <p className="text-[18px]">Conheça os nossos imóveis e encontre seu novo lar</p>
+                     <SubHeading>Conheça os nossos imóveis e encontre seu novo lar</SubHeading>
                   </div>
                   <Tabs />
                </div>
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="pt-[75px] pb-[85px] flex flex-nowrap ">
                <div className="basis-[45%] ">
                   <div id="prettyBox" className="flex flex-col gap-[26px] px-[50px] py-[70px] rounded-lg">
-                     <Heading customClass="font-semibold">Imóveis com a qualidade Construtora</Heading>
+                     <Heading>Imóveis com a qualidade Construtora</Heading>
                      <p className="text-[19px] font-medium">
                         Somos uma empresa de construção civil pesada. Especializados em saneamento, pavimentação, redes enterradas, obras de arte
                         especial, estruturas de concreto armado, urbanização, estruturas metálicas e tubulações.
@@ -127,7 +127,7 @@ export default function Home() {
          <div className="bg-foreground py-[75px] text-center">
             <Container>
                <Heading>Blog</Heading>
-               <p className="text-[19px] font-medium mt-2 mb-10">Fique por dentro dos últimos artigos do blog da Construtora</p>
+               <SubHeading customClass="mt-2 mb-10">Fique por dentro dos últimos artigos do blog da Construtora</SubHeading>
                <div className="columns-3 gap-[27px]">
                   {artigos.map((v, k) => (
                      <CardArtigo artigo={v} key={k} />
@@ -140,6 +140,14 @@ export default function Home() {
                </div>
             </Container>
          </div>
+
+         {/* Depoimentos */}
+         <Container>
+            <div className="py-[75px] text-center">
+               <Heading>Depoimentos</Heading>
+               <SubHeading customClass="mt-2">Leia os depoimentos de quem realizou seus sonhos com a Construtora</SubHeading>
+            </div>
+         </Container>
       </div>
    );
 }
