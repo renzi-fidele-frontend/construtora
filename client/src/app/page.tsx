@@ -119,7 +119,7 @@ const depoimentos: IDepoimento[] = [
 
 export default function Home() {
    return (
-      <div className="Home ">
+      <div className="Home">
          {/* Banner Topo */}
          <Slide
             empreendimento={{
@@ -195,7 +195,7 @@ export default function Home() {
 
          {/* Depoimentos */}
          <Container>
-            <div className="py-[75px] text-center">
+            <div className="pt-[75px] pb-[100px] text-center">
                <Heading>Depoimentos</Heading>
                <SubHeading customClass="mt-2 mb-5">Leia os depoimentos de quem realizou seus sonhos com a Construtora</SubHeading>
                <div className="mt-10">
