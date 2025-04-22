@@ -1,4 +1,4 @@
-import { IDepoimento } from "@/app/global";
+import { IDepoimento } from "@/app/types";
 import Image from "next/image";
 import Link from "next/link";
 

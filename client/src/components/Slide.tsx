@@ -2,7 +2,7 @@ import Image from "next/image";
 import Container from "./Container";
 import { Building, Calendar, MapPin } from "lucide-react";
 import Foto from "../../public/img/Fundo.jpg";
-import { IEmpreendimento } from "@/app/global";
+import { IEmpreendimento } from "@/app/types";
 
 const Slide = ({ empreendimento }: { empreendimento: IEmpreendimento }) => {
    return (

@@ -1,4 +1,4 @@
-import { IEmpreendimento } from "@/app/global";
+import { IEmpreendimento } from "@/app/types";
 import { Building, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

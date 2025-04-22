@@ -3,7 +3,7 @@ import Slide from "@/components/Slide";
 import fundo from "../../public/img/Fundo.jpg";
 import Container from "@/components/Container";
 import Tabs from "@/components/Tabs";
-import { ICardArtigo, IDepoimento, IEmpreendimento } from "./global";
+import { ICardArtigo, IDepoimento, IEmpreendimento } from "./types";
 import CardEmpreendimento from "@/components/CardEmpreendimento";
 import Image from "next/image";
 import fotoSobre from "@/../public/img/construtora-home.webp";
@@ -123,7 +123,13 @@ export default function Home() {
    return (
       <div className="Home">
          {/* Banner Topo */}
-         <Swiper modules={[Navigation, Pagination, Autoplay, EffectFade]} effect="fade" autoplay={{delay: 5000}} navigation={true} pagination={true}>
+         <Swiper
+            modules={[Navigation, Pagination, Autoplay, EffectFade]}
+            effect="fade"
+            autoplay={{ delay: 5000 }}
+            navigation={true}
+            pagination={true}
+         >
             {empreendimentos.map((v, k) => (
                <SwiperSlide key={k}>
                   <Slide empreendimento={v} />

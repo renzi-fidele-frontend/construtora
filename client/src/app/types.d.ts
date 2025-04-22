@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 
 interface IEmpreendimento {
    titulo?: string;
-   categoria?: string;
+   categoria?: TypeCategoria;
    descricao?: string;
    estado?: string;
    endereco_completo?: string;
@@ -29,3 +29,5 @@ interface IDepoimento {
    empreendimento: string;
    foto: StaticImageData;
 }
+
+type TypeCategoria = "Em Construção" | "Lançamento" | "Pronto para morar";
