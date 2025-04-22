@@ -45,12 +45,62 @@ const empreendimentos: IEmpreendimento[] = [
    },
    {
       foto: fundo,
-      categoria: "Em construção",
+      categoria: "Em Construção",
       data_entrega: "Agosto de 2023",
       descricao: "Conforto e sofisticação em um dos bairros mais nobres da cidade",
       destaques: "Apartamentos de alto padrão",
       endereco_completo: "Jurerê Internacional, Florianópolis",
       titulo: "Jurerê Exclusive",
+      estado: "Santa Catarina",
+   },
+   {
+      foto: fundo,
+      categoria: "Pronto para morar",
+      data_entrega: "Janeiro de 2023",
+      descricao: "Um lugar perfeito para viver momentos inesquecíveis",
+      destaques: "3 e 4 quartos",
+      endereco_completo: "Praia Brava, Itajaí",
+      titulo: "Brava Home Resort",
+      estado: "Santa Catarina",
+   },
+   {
+      foto: fundo,
+      categoria: "Lançamento",
+      data_entrega: "Dezembro de 2025",
+      descricao: "O futuro do morar bem com tecnologia e sustentabilidade",
+      destaques: "1 e 2 quartos c/ suíte",
+      endereco_completo: "Centro, Balneário Camboriú",
+      titulo: "Infinity Tower",
+      estado: "Santa Catarina",
+   },
+   {
+      foto: fundo,
+      categoria: "Em Construção",
+      data_entrega: "Julho de 2024",
+      descricao: "Um empreendimento exclusivo com vista para o mar",
+      destaques: "2 e 3 quartos c/ suíte",
+      endereco_completo: "Beira-Mar Norte, Florianópolis",
+      titulo: "Ocean View Residence",
+      estado: "Santa Catarina",
+   },
+   {
+      foto: fundo,
+      categoria: "Pronto para morar",
+      data_entrega: "Setembro de 2022",
+      descricao: "Viva com conforto e segurança em um condomínio fechado",
+      destaques: "2 e 3 quartos",
+      endereco_completo: "Bairro Ingleses, Florianópolis",
+      titulo: "Green Village",
+      estado: "Santa Catarina",
+   },
+   {
+      foto: fundo,
+      categoria: "Lançamento",
+      data_entrega: "Junho de 2026",
+      descricao: "O equilíbrio perfeito entre natureza e modernidade",
+      destaques: "1, 2 e 3 quartos",
+      endereco_completo: "Centro, Joinville",
+      titulo: "Nature Living",
       estado: "Santa Catarina",
    },
 ];
@@ -148,7 +198,7 @@ export default function Home() {
                   <Tabs />
                </div>
                <div className="columns-3 gap-7 mt-6">
-                  {empreendimentos.map((v, k) => (
+                  {empreendimentos.slice(0, 3).map((v, k) => (
                      <CardEmpreendimento empreendimento={v} key={k} />
                   ))}
                </div>

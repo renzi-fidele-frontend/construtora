@@ -1,13 +1,13 @@
 import { TypeCategoria } from "@/app/types";
 
-export default function verificarCorCategoria(categoria: TypeCategoria): color {
+export default function verificarCorCategoria(categoria?: TypeCategoria) {
    switch (categoria) {
       case "Em Construção":
-         return "#B37631";
+         return "bg-[#317C08]";
       case "Lançamento":
-         return "#5231B3";
+         return "bg-[#5231B3]";
       case "Pronto para morar":
-         return "";
+         return "bg-[#B37631]";
       default:
          return null;
    }

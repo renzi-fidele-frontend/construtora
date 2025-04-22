@@ -1,4 +1,5 @@
 import { IEmpreendimento } from "@/app/types";
+import verificarCorCategoria from "@/utils/verificarCorCategoria";
 import { Building, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,11 @@ const CardEmpreendimento = ({ empreendimento }: { empreendimento: IEmpreendiment
                      </p>
                   </div>
                </div>
-               <p className="px-[9px] py-1 bg-red-600 rounded-xl absolute top-2 start-2 text-white text-[12px] uppercase font-semibold">
+               <p
+                  className={`px-[9px] py-1 ${verificarCorCategoria(
+                     empreendimento.categoria
+                  )} rounded-xl absolute top-2 start-2 text-white text-[12px] uppercase font-semibold`}
+               >
                   {empreendimento.categoria}
                </p>
             </div>
