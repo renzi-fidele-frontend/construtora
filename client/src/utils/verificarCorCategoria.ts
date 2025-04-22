@@ -7,7 +7,7 @@ export default function verificarCorCategoria(categoria?: TypeCategoria) {
       case "Lançamento":
          return "bg-[#5231B3]";
       case "Pronto para morar":
-         return "bg-[#B37631]";
+         return "bg-[#FF990A]";
       default:
          return null;
    }
